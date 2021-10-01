@@ -3,23 +3,27 @@
   composer = "Henré Botha"
 }
 
+\language "english"
+
 quintSwing = 5/4
 
 \score {
   <<
-    \new Staff {
+    \new Staff \with {
+      instrumentName = "Guitar"
+    } {
       \tempo 4 = 66
       \clef bass
       \time 2/4
       \fixed c, {
-        \tuplet \quintSwing 4 {<e gis fis'>8. <e gis fis'>8}
-        \tuplet \quintSwing 4 {<e gis fis'>8. <e gis fis'>8}
-        \tuplet \quintSwing 4 {<e g fis'>8. <e g fis'>8}
-        \tuplet \quintSwing 4 {<e g fis'>8. <e g fis'>8}
+        \tuplet \quintSwing 4 {<e gs fs'>8. <e gs fs'>8}
+        \tuplet \quintSwing 4 {<e gs fs'>8. <e gs fs'>8}
+        \tuplet \quintSwing 4 {<e g fs'>8. <e g fs'>8}
+        \tuplet \quintSwing 4 {<e g fs'>8. <e g fs'>8}
         \tuplet \quintSwing 4 {<c g e'>8. <c g e'>8}
         \tuplet \quintSwing 4 {<c g e'>8. <c g e'>8}
-        \tuplet \quintSwing 4 {<cis gis e'>8. <cis gis e'>8}
-        \tuplet \quintSwing 4 {<cis gis e'>8. <cis gis e'>8}
+        \tuplet \quintSwing 4 {<cs gs e'>8. <cs gs e'>8}
+        \tuplet \quintSwing 4 {<cs gs e'>8. <cs gs e'>8}
       }
     }
     \new DrumStaff <<
