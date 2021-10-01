@@ -47,6 +47,8 @@ guitarMusic = \fixed c, {
       \voiceTwo \drummode
       {
         \override Beam #'positions = #'(-5 . -5)
+        \override TupletBracket.bracket-visibility = ##f
+        \omit TupletNumber
         \tuplet \quintSwing 4 {bd4 bd16}
         sn4
         \tuplet \quintSwing 4 {bd4 bd16}
