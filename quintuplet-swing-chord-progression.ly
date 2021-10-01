@@ -7,25 +7,32 @@
 
 quintSwing = 5/4
 
+guitarMusic = \fixed c, {
+  \tuplet \quintSwing 4 {<e'\6 gs'\5 fs''\3>8. <e'\6 gs'\5 fs''\3>8}
+  \tuplet \quintSwing 4 {<e'\6 gs'\5 fs''\3>8. <e'\6 gs'\5 fs''\3>8}
+  \tuplet \quintSwing 4 {<e'\6 g'\5 fs''\3>8. <e'\6 g'\5 fs''\3>8}
+  \tuplet \quintSwing 4 {<e'\6 g'\5 fs''\3>8. <e'\6 g'\5 fs''\3>8}
+  \tuplet \quintSwing 4 {<c'\6 g'\5 e''\3>8. <c'\6 g'\5 e''\3>8}
+  \tuplet \quintSwing 4 {<c'\6 g'\5 e''\3>8. <c'\6 g'\5 e''\3>8}
+  \tuplet \quintSwing 4 {<cs'\6 gs'\5 e''\3>8. <cs'\6 gs'\5 e''\3>8}
+  \tuplet \quintSwing 4 {<cs'\6 gs'\5 e''\3>8. <cs'\6 gs'\5 e''\3>8}
+}
+
 \score {
   <<
-    \new Staff \with {
+    \new StaffGroup \with {
       instrumentName = "Guitar"
-    } {
-      \tempo 4 = 66
-      \clef bass
-      \time 2/4
-      \fixed c, {
-        \tuplet \quintSwing 4 {<e gs fs'>8. <e gs fs'>8}
-        \tuplet \quintSwing 4 {<e gs fs'>8. <e gs fs'>8}
-        \tuplet \quintSwing 4 {<e g fs'>8. <e g fs'>8}
-        \tuplet \quintSwing 4 {<e g fs'>8. <e g fs'>8}
-        \tuplet \quintSwing 4 {<c g e'>8. <c g e'>8}
-        \tuplet \quintSwing 4 {<c g e'>8. <c g e'>8}
-        \tuplet \quintSwing 4 {<cs gs e'>8. <cs gs e'>8}
-        \tuplet \quintSwing 4 {<cs gs e'>8. <cs gs e'>8}
+    } <<
+      \new Staff {
+        \tempo 4 = 66
+        \clef "treble_8"
+        \time 2/4
+        \guitarMusic
       }
-    }
+      \new TabStaff {
+        \guitarMusic
+      }
+    >>
     \new DrumStaff <<
       \new DrumVoice = "cymbals" {
       \voiceOne \drummode {
