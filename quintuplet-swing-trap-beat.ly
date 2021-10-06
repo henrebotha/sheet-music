@@ -8,7 +8,7 @@
 quintSwing = 5/4
 
 \score {
-  \new DrumStaff <<
+  \repeat volta 2 \new DrumStaff <<
     \tempo 4 = 100
     \time 4/4
     \new DrumVoice = "cymbals" {
