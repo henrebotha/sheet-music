@@ -9,7 +9,7 @@ quintSwing = 5/4
 
 \score {
   \new DrumStaff <<
-    \tempo 4 = 156
+    \tempo 4 = 100
     \time 4/4
     \new DrumVoice = "cymbals" {
       \voiceOne \drummode {
