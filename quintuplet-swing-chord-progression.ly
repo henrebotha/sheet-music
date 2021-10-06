@@ -8,10 +8,10 @@
 quintSwing = 5/4
 
 guitarMusic = \fixed c, {
-  \repeat unfold 2 \tuplet \quintSwing 4 {<e'\6 gs'\5 fs''\3>8. <e'\6 gs'\5 fs''\3>8}
-  \repeat unfold 2 \tuplet \quintSwing 4 {<e'\6 g'\5 fs''\3>8. <e'\6 g'\5 fs''\3>8}
-  \repeat unfold 2 \tuplet \quintSwing 4 {<c'\6 g'\5 e''\3>8. <c'\6 g'\5 e''\3>8}
-  \repeat unfold 2 \tuplet \quintSwing 4 {<cs'\6 gs'\5 e''\3>8. <cs'\6 gs'\5 e''\3>8}
+  \repeat unfold 2 \tuplet \quintSwing 4 {<b,\7 ds'\6 cs''\4>8. <b,\7 ds'\6 cs''\4>8}
+  \repeat unfold 2 \tuplet \quintSwing 4 {<b,\7 d'\6 cs''\4>8. <b,\7 d'\6 cs''\4>8}
+  \repeat unfold 2 \tuplet \quintSwing 4 {<g\7 d'\6 b'\4>8. <g\7 d'\6 b'\4>8}
+  \repeat unfold 2 \tuplet \quintSwing 4 {<gs\7 ds'\6 b'\4>8. <gs\7 ds'\6 b'\4>8}
 }
 
 \score {
@@ -25,7 +25,9 @@ guitarMusic = \fixed c, {
         \time 2/4
         \guitarMusic
       }
-      \new TabStaff {
+      \new TabStaff \with {
+        stringTunings = #guitar-seven-string-tuning
+      } {
         \guitarMusic
       }
     >>
