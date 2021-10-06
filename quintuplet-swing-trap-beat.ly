@@ -15,7 +15,7 @@ quintSwing = 5/4
       \voiceOne \drummode {
         \override Beam #'positions = #'(5 . 5)
         \repeat unfold 2 \tuplet \quintSwing 4 {r8. hh8} r2
-        \repeat unfold 4 hh4
+        \repeat unfold 4 \tuplet \quintSwing 4 {hh8. r8}
       }
     }
     \new DrumVoice = "drums" {
