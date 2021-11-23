@@ -6,7 +6,7 @@
 \language "english"
 
 guitarMusic = \fixed c, {
-  cs16\7 r8. cs16 b, fs\6 e r e r8 r2
+  cs16\7 r8 \deadNote16 cs16 b, fs\6 e r e r8 r2
 }
 
 \score {
