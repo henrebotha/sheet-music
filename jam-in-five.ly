@@ -31,7 +31,7 @@ guitarMusic = \fixed c, {
       \voiceOne \drummode {
         \override Beam #'positions = #'(5 . 5)
         \repeat unfold 3 {hh16 hh hh hh}
-        \repeat unfold 2 \tuplet 3/2 {hh16 hh hh hh hh hh}
+        \repeat unfold 4 \tuplet 3/2 {hh16 hh hh}
       }
       }
       \new DrumVoice = "drums" {
